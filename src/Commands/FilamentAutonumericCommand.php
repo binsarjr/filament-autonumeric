@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorName\Skeleton\Commands;
+namespace Binsarjr\FilamentAutonumeric\Commands;
 
 use Illuminate\Console\Command;
 
-class SkeletonCommand extends Command
+class FilamentAutonumericCommand extends Command
 {
-    public $signature = 'skeleton';
+    public $signature = 'filament-autonumeric';
 
     public $description = 'My command';
 
