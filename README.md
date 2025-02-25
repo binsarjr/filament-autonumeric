@@ -1,5 +1,9 @@
 # This is library Wrapper in Filament for Autonumeric.js
 
+
+https://autonumeric.org/configurator
+
+
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/binsarjr/filament-autonumeric.svg?style=flat-square)](https://packagist.org/packages/binsarjr/filament-autonumeric)
 [![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/binsarjr/filament-autonumeric/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/binsarjr/filament-autonumeric/actions?query=workflow%3Arun-tests+branch%3Amain)
 [![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/binsarjr/filament-autonumeric/fix-php-code-styling.yml?branch=main&label=code%20style&style=flat-square)](https://github.com/binsarjr/filament-autonumeric/actions?query=workflow%3A"Fix+PHP+code+styling"+branch%3Amain)

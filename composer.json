@@ -40,14 +40,10 @@
     },
     "autoload": {
         "psr-4": {
-            "Binsarjr\\FilamentAutonumeric\\": "src/",
-            "Binsarjr\\FilamentAutonumeric\\Database\\Factories\\": "database/factories/"
+            "Binsarjr\\FilamentAutonumeric\\": "src/"
         }
     },
     "autoload-dev": {
-        "psr-4": {
-            "Binsarjr\\FilamentAutonumeric\\Tests\\": "tests/"
-        }
     },
     "scripts": {
         "post-autoload-dump": "@php ./vendor/bin/testbench package:discover --ansi",
