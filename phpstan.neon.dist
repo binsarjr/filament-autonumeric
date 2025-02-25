@@ -3,7 +3,8 @@ includes:
 
 parameters:
     ignoreErrors:
-        - identifier: missingType.iterableValue
+        -
+            identifier: missingType.iterableValue
     level: 4
     paths:
         - src
