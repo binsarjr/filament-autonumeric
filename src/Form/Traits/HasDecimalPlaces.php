@@ -4,9 +4,6 @@ namespace Binsarjr\FilamentAutonumeric\Form\Traits;
 
 trait HasDecimalPlaces
 {
-
-
-
     protected int $decimalPlaces = 2;
 
     public function decimalPlaces(int $decimalPlaces): static
@@ -20,9 +17,4 @@ trait HasDecimalPlaces
     {
         return $this->decimalPlaces;
     }
-
-
-
-
-
 }

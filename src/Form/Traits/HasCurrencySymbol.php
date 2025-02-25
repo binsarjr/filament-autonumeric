@@ -17,6 +17,4 @@ trait HasCurrencySymbol
     {
         return $this->currencySymbol;
     }
-
-
 }

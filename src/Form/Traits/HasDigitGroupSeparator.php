@@ -6,8 +6,6 @@ trait HasDigitGroupSeparator
 {
     protected string $digitGroupSeparator = ',';
 
-
-
     public function digitGroupSeparator(string $digitGroupSeparator): static
     {
         $this->digitGroupSeparator = $digitGroupSeparator;
@@ -19,5 +17,4 @@ trait HasDigitGroupSeparator
     {
         return $this->digitGroupSeparator;
     }
-
 }

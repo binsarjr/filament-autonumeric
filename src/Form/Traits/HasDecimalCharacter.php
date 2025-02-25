@@ -4,8 +4,8 @@ namespace Binsarjr\FilamentAutonumeric\Form\Traits;
 
 trait HasDecimalCharacter
 {
-
     protected string $decimalCharacter = '.';
+
     public function decimalCharacter(string $decimalCharacter): static
     {
         $this->decimalCharacter = $decimalCharacter;

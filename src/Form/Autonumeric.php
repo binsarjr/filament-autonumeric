@@ -24,8 +24,9 @@ class Autonumeric extends Field implements HasAffixActions
     use Traits\HasDecimalCharacterAlternative;
     use Traits\HasDecimalPlaces;
     use Traits\HasDecimalPlacesRawValue;
-//    use Traits\HasDecimalPlacesShownOnBlur;
-//    use Traits\HasDecimalPlacesShownOnFocus;
+
+    //    use Traits\HasDecimalPlacesShownOnBlur;
+    //    use Traits\HasDecimalPlacesShownOnFocus;
     use Traits\HasDigitalGroupSpacing;
     use Traits\HasDigitGroupSeparator;
     use Traits\HasUnformatOnSubmit;

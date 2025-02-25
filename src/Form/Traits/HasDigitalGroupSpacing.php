@@ -6,9 +6,6 @@ use Binsarjr\FilamentAutonumeric\Enum\DigitalGroupSpacing;
 
 trait HasDigitalGroupSpacing
 {
-
-
-
     protected DigitalGroupSpacing | string $digitalGroupSpacing = DigitalGroupSpacing::Three;
 
     public function digitalGroupSpacing(DigitalGroupSpacing | string $digitalGroupSpacing): static

@@ -2,6 +2,7 @@
 
 namespace Binsarjr\FilamentAutonumeric\Tests;
 
+use Binsarjr\FilamentAutonumeric\FilamentAutonumericServiceProvider;
 use BladeUI\Heroicons\BladeHeroiconsServiceProvider;
 use BladeUI\Icons\BladeIconsServiceProvider;
 use Filament\Actions\ActionsServiceProvider;
@@ -16,7 +17,6 @@ use Illuminate\Database\Eloquent\Factories\Factory;
 use Livewire\LivewireServiceProvider;
 use Orchestra\Testbench\TestCase as Orchestra;
 use RyanChandler\BladeCaptureDirective\BladeCaptureDirectiveServiceProvider;
-use Binsarjr\FilamentAutonumeric\FilamentAutonumericServiceProvider;
 
 class TestCase extends Orchestra
 {

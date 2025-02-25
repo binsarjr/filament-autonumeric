@@ -8,7 +8,6 @@ trait HasAlwaysAllowDecimalCharacter
 {
     protected AlwaysAllowDecimalCharacter | bool $alwaysAllowDecimalCharacter = AlwaysAllowDecimalCharacter::DoNotAllow;
 
-
     public function alwaysAllowDecimalCharacter(AlwaysAllowDecimalCharacter | bool $allowDecimalPadding): static
     {
         $this->alwaysAllowDecimalCharacter = $allowDecimalPadding;
@@ -24,5 +23,4 @@ trait HasAlwaysAllowDecimalCharacter
 
         return $this->alwaysAllowDecimalCharacter;
     }
-
 }

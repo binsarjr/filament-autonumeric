@@ -4,9 +4,8 @@ namespace Binsarjr\FilamentAutonumeric\Form\Traits;
 
 trait HasDecimalPlacesShownOnBlur
 {
-
-
     protected ?int $decimalPlacesShownOnBlur = null;
+
     public function decimalPlacesShownOnBlur(?int $decimalPlacesShownOnBlur): static
     {
         $this->decimalPlacesShownOnBlur = $decimalPlacesShownOnBlur;
@@ -18,6 +17,4 @@ trait HasDecimalPlacesShownOnBlur
     {
         return $this->decimalPlacesShownOnBlur;
     }
-
-
 }

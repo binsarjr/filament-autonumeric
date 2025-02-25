@@ -4,11 +4,12 @@ namespace Binsarjr\FilamentAutonumeric\Form\Traits;
 
 trait HasUnformatOnSubmit
 {
-    protected bool|null $unformatOnSubmit = false;
+    protected ?bool $unformatOnSubmit = false;
 
     public function unformatOnSubmit(bool $unformatOnSubmit = true): static
     {
         $this->unformatOnSubmit = $unformatOnSubmit;
+
         return $this;
     }
 
@@ -16,6 +17,4 @@ trait HasUnformatOnSubmit
     {
         return $this->unformatOnSubmit ?? false;
     }
-
-
 }

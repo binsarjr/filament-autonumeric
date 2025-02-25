@@ -17,5 +17,4 @@ trait HasDecimalCharacterAlternative
     {
         return $this->decimalCharacterAlternative;
     }
-
 }

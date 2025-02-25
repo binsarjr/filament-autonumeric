@@ -6,7 +6,6 @@ use Binsarjr\FilamentAutonumeric\Enum\CurrencySymbolPlacement;
 
 trait HasCurrencySymbolPlacement
 {
-
     protected CurrencySymbolPlacement | string $currencySymbolPlacement = CurrencySymbolPlacement::Prefix;
 
     public function currencySymbolPlacement(CurrencySymbolPlacement | string $currencySymbolPlacement): static
@@ -24,5 +23,4 @@ trait HasCurrencySymbolPlacement
 
         return $this->currencySymbolPlacement->value;
     }
-
 }

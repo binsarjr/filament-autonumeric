@@ -17,5 +17,4 @@ trait HasDecimalPlacesRawValue
     {
         return $this->decimalPlacesRawValue;
     }
-
 }
