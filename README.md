@@ -1,4 +1,4 @@
-# This is my package filament-autonumeric
+# This is library Wrapper in Filament for Autonumeric.js
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/binsarjr/filament-autonumeric.svg?style=flat-square)](https://packagist.org/packages/binsarjr/filament-autonumeric)
 [![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/binsarjr/filament-autonumeric/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/binsarjr/filament-autonumeric/actions?query=workflow%3Arun-tests+branch%3Amain)
@@ -17,44 +17,24 @@ You can install the package via composer:
 composer require binsarjr/filament-autonumeric
 ```
 
-You can publish and run the migrations with:
 
-```bash
-php artisan vendor:publish --tag="filament-autonumeric-migrations"
-php artisan migrate
-```
-
-You can publish the config file with:
-
-```bash
-php artisan vendor:publish --tag="filament-autonumeric-config"
-```
-
-Optionally, you can publish the views using
-
-```bash
-php artisan vendor:publish --tag="filament-autonumeric-views"
-```
-
-This is the contents of the published config file:
-
-```php
-return [
-];
-```
 
 ## Usage
 
 ```php
-$filamentAutonumeric = new Binsarjr\FilamentAutonumeric();
-echo $filamentAutonumeric->echoPhrase('Hello, Binsarjr!');
+Autonumeric::make('nominal')
+    ->columnSpanFull()
+    ->label('Jumlah (IDR)')
+    ->allowDecimalPadding('floats')
+    ->digitGroupSeparator('.')
+    ->decimalCharacter(',')
+    ->suffix('IDR')
+    ->decimalPlaces(2)
+    ->currencySymbol('Rp.')
+    ->currencySymbolPlacement(CurrencySymbolPlacement::Prefix)
+    ->required()
 ```
 
-## Testing
-
-```bash
-composer test
-```
 
 ## Changelog
 

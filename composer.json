@@ -1,6 +1,7 @@
 {
     "name": "binsarjr/filament-autonumeric",
     "description": "This is my package filament-autonumeric",
+    "version": "1.0.0",
     "keywords": [
         "binsarjr",
         "laravel",
