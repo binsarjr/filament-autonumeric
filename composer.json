@@ -66,10 +66,7 @@
         "laravel": {
             "providers": [
                 "Binsarjr\\FilamentAutonumeric\\FilamentAutonumericServiceProvider"
-            ],
-            "aliases": {
-                "FilamentAutonumeric": "Binsarjr\\FilamentAutonumeric\\Facades\\FilamentAutonumeric"
-            }
+            ]
         }
     },
     "minimum-stability": "dev",
