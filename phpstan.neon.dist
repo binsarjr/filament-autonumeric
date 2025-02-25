@@ -2,13 +2,12 @@ includes:
     - phpstan-baseline.neon
 
 parameters:
-    excludePaths:
-        - database/*
+    ignoreErrors:
+        - identifier: missingType.iterableValue
     level: 4
     paths:
         - src
         - config
-        - database
     tmpDir: build/phpstan
     checkOctaneCompatibility: true
     checkModelProperties: true
