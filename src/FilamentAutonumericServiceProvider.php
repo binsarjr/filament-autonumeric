@@ -8,13 +8,8 @@ use Filament\Support\Assets\Css;
 use Filament\Support\Assets\Js;
 use Filament\Support\Facades\FilamentAsset;
 use Filament\Support\Facades\FilamentIcon;
-use Illuminate\Filesystem\Filesystem;
-use Livewire\Features\SupportTesting\Testable;
-use Spatie\LaravelPackageTools\Commands\InstallCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Binsarjr\FilamentAutonumeric\Commands\FilamentAutonumericCommand;
-use Binsarjr\FilamentAutonumeric\Testing\TestsFilamentAutonumeric;
 
 class FilamentAutonumericServiceProvider extends PackageServiceProvider
 {
@@ -29,24 +24,12 @@ class FilamentAutonumericServiceProvider extends PackageServiceProvider
          *
          * More info: https://github.com/spatie/laravel-package-tools
          */
-        $package->name(static::$name)
-            ->hasCommands($this->getCommands())
-            ->hasInstallCommand(function (InstallCommand $command) {
-                $command
-                    ->publishConfigFile()
-                    ->publishMigrations()
-                    ->askToRunMigrations()
-                    ->askToStarRepoOnGitHub('binsarjr/filament-autonumeric');
-            });
+        $package->name(static::$name);
 
         $configFileName = $package->shortName();
 
         if (file_exists($package->basePath("/../config/{$configFileName}.php"))) {
             $package->hasConfigFile();
-        }
-
-        if (file_exists($package->basePath('/../database/migrations'))) {
-            $package->hasMigrations($this->getMigrations());
         }
 
         if (file_exists($package->basePath('/../resources/lang'))) {
@@ -76,17 +59,6 @@ class FilamentAutonumericServiceProvider extends PackageServiceProvider
         // Icon Registration
         FilamentIcon::register($this->getIcons());
 
-        // Handle Stubs
-        if (app()->runningInConsole()) {
-            foreach (app(Filesystem::class)->files(__DIR__ . '/../stubs/') as $file) {
-                $this->publishes([
-                    $file->getRealPath() => base_path("stubs/filament-autonumeric/{$file->getFilename()}"),
-                ], 'filament-autonumeric-stubs');
-            }
-        }
-
-        // Testing
-        Testable::mixin(new TestsFilamentAutonumeric);
     }
 
     protected function getAssetPackageName(): ?string
@@ -101,18 +73,8 @@ class FilamentAutonumericServiceProvider extends PackageServiceProvider
     {
         return [
             // AlpineComponent::make('filament-autonumeric', __DIR__ . '/../resources/dist/components/filament-autonumeric.js'),
-            Css::make('filament-autonumeric-styles', __DIR__ . '/../resources/dist/filament-autonumeric.css'),
+            //            Css::make('filament-autonumeric-styles', __DIR__ . '/../resources/dist/filament-autonumeric.css'),
             Js::make('filament-autonumeric-scripts', __DIR__ . '/../resources/dist/filament-autonumeric.js'),
-        ];
-    }
-
-    /**
-     * @return array<class-string>
-     */
-    protected function getCommands(): array
-    {
-        return [
-            FilamentAutonumericCommand::class,
         ];
     }
 
@@ -125,28 +87,10 @@ class FilamentAutonumericServiceProvider extends PackageServiceProvider
     }
 
     /**
-     * @return array<string>
-     */
-    protected function getRoutes(): array
-    {
-        return [];
-    }
-
-    /**
      * @return array<string, mixed>
      */
     protected function getScriptData(): array
     {
         return [];
-    }
-
-    /**
-     * @return array<string>
-     */
-    protected function getMigrations(): array
-    {
-        return [
-            'create_filament-autonumeric_table',
-        ];
     }
 }
