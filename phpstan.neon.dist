@@ -2,6 +2,8 @@ includes:
     - phpstan-baseline.neon
 
 parameters:
+    excludePaths:
+        - database/*
     level: 4
     paths:
         - src
